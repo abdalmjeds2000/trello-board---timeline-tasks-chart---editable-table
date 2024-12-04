@@ -1,7 +1,7 @@
 import React from "react";
 
 const CustomCard: React.FC<CustomCardProps> = ({
-  id, title, description, status, tags
+  /* id,  */title, description, status, tags
 }) => {
   return (
     <div className="relative px-6 py-3 bg-white rounded-md border shadow-lg mb-2">

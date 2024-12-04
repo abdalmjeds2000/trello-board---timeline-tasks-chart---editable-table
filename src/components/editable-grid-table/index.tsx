@@ -319,7 +319,7 @@ const EditableGridTable = () => {
 
   //   setData({ nodes: result.data.hits });
   // }, []);
-  const handleUpdate = (value, id, property) => {
+  const handleUpdate = (value: any, id: any, property: any) => {
     setData((state) => ({
       ...state,
       nodes: state.nodes.map((node) => {
@@ -338,7 +338,7 @@ const EditableGridTable = () => {
   const COLUMNS = [
     {
       label: "Task",
-      renderCell: (item) => (
+      renderCell: (item: any) => (
         <input
           type="text"
           style={{
@@ -357,7 +357,7 @@ const EditableGridTable = () => {
     },
     {
       label: "Deadline",
-      renderCell: (item) => (
+      renderCell: (item: any) => (
         <input
           type="date"
           style={{
@@ -376,7 +376,7 @@ const EditableGridTable = () => {
     },
     {
       label: "Created by",
-      renderCell: (item) => (
+      renderCell: (item: any) => (
         <Select value={item.createdBy.id} onValueChange={(value) => handleUpdate(value, item.id, "createdBy")}>
           <SelectTrigger className="w-full">
             <SelectValue />
@@ -422,13 +422,13 @@ const EditableGridTable = () => {
     },
     {
       label: "Complete",
-      renderCell: (item) => (
+      renderCell: (item: any) => (
         <Checkbox checked={item.isComplete} onCheckedChange={(check) => handleUpdate(check, item.id, "isComplete")} />
       ),
     },
     {
       label: "Tasks",
-      renderCell: (item) => (
+      renderCell: (item: any) => (
         <input
           type="number"
           style={{
